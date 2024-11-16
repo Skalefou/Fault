@@ -1,3 +1,9 @@
+/*
+ * @file Game.h
+ * @brief Game management
+ * @copydetails Game.c
+ */
+
 #ifndef GAME_H
 #define GAME_H
 

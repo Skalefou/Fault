@@ -1,3 +1,9 @@
+/*
+ * @file WindowManager.h
+ * @brief WindowManager class
+ * @copydetails WindowManager.c
+ */
+
 #ifndef WINDOW_H
 #define WINDOW_H
 

@@ -1,3 +1,9 @@
+/**
+ * @file WindowManager.c
+ * @brief WindowManager class implementation
+ * @details Handles all window management
+ */
+
 #include "WindowManager.h"
 #include "Game.h"
 
