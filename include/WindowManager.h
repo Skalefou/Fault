@@ -17,7 +17,17 @@ typedef struct {
     SDL_Renderer *renderer;
 } WindowManager;
 
+/**
+ * @brief Get the WindowManager instance
+ * @return The WindowManager instance
+ */
 WindowManager *WindowManager_getInstance();
+
+/**
+ * @brief Free the WindowManager instance
+ */
 void WindowManager_free();
+
+void Window
 
 #endif

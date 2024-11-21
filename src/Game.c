@@ -8,13 +8,22 @@
 #include <SDL2/SDL.h>
 #include "Game.h"
 #include "WindowManager.h"
+#include "Renderer.h"
 
 Game *Game_getInstance()
 {
+    static Game instance;
+    static int init = 0;
+    if (!init)
+    {
+        instance.runningApp = 1;
+        init = 1;
+    }
 
+    return &instance;
 }
 
-void Game_init()
+Game *Game_init()
 {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {
@@ -22,13 +31,26 @@ void Game_init()
         Game_quit(EXIT_FAILURE);
     }
     WindowManager *windowManager = WindowManager_getInstance();
+    Game *game = Game_getInstance();
+    return game;
 }
 
 void Game_loop()
 {
-    Game_init();
+    Game *game = Game_init();
 
+    while (game->runningApp)
+    {
+        while (SDL_PollEvent(&game->event))
+        {
+            if (game->event.type == SDL_QUIT)
+            {
+                game->runningApp = 0;
+            }
+        }
 
+        Renderer_render();
+    }
 
     Game_quit(EXIT_SUCCESS);
 }

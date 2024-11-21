@@ -7,15 +7,18 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <SDL2/SDL.h>
+
 typedef struct {
     int runningApp;
+    SDL_Event event;
 } Game;
 
 
 /**
  * @brief Initialize the game
  */
-void Game_init();
+Game *Game_init();
 
 /**
  * @brief Main loop of the game
