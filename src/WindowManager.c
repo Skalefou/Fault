@@ -27,8 +27,6 @@ WindowManager *WindowManager_getInstance()
             SDL_Log("Could not create window and renderer: %s", SDL_GetError());
             Game_quit(EXIT_FAILURE);
         }
-
-
         init = 1;
     }
     return &instance;

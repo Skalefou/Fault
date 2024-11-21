@@ -9,6 +9,11 @@
 #include "Game.h"
 #include "WindowManager.h"
 
+Game *Game_getInstance()
+{
+
+}
+
 void Game_init()
 {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
@@ -22,6 +27,9 @@ void Game_init()
 void Game_loop()
 {
     Game_init();
+
+
+
     Game_quit(EXIT_SUCCESS);
 }
 
