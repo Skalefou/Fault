@@ -19,14 +19,15 @@ WindowManager *WindowManager_getInstance()
             Game_quit(EXIT_FAILURE);
         }
 
-        instance.width = instance.userScreen.w * 0.8;
-        instance.height = instance.userScreen.h * 9 / 16;
+        instance.width = instance.userScreen.w;
+        instance.height = instance.userScreen.h;
 
-        if (SDL_CreateWindowAndRenderer(instance.width, instance.height, SDL_WINDOW_SHOWN, &instance.window, &instance.renderer) != 0)
+        if (SDL_CreateWindowAndRenderer(instance.width, instance.height, SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP, &instance.window, &instance.renderer) != 0)
         {
             SDL_Log("Could not create window and renderer: %s", SDL_GetError());
             Game_quit(EXIT_FAILURE);
         }
+        SDL_SetWindowTitle(instance.window, "Fault");
         init = 1;
     }
     return &instance;

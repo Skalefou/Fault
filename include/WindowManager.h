@@ -18,7 +18,7 @@ typedef struct {
 } WindowManager;
 
 /**
- * @brief Get the WindowManager instance
+ * @brief Get the WindowManager instance, create it if it doesn't exist
  * @return The WindowManager instance
  */
 WindowManager *WindowManager_getInstance();
@@ -27,7 +27,5 @@ WindowManager *WindowManager_getInstance();
  * @brief Free the WindowManager instance
  */
 void WindowManager_free();
-
-void Window
 
 #endif
