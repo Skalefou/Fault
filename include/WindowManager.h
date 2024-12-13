@@ -9,6 +9,9 @@
 
 #include <SDL2/SDL.h>
 
+#define SCREEN_LOGICAL_WIDTH 1920
+#define SCREEN_LOGICAL_HEIGHT 1080
+
 typedef struct {
     int width;
     int height;

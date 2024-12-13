@@ -7,10 +7,11 @@
 #include "WindowManager.h"
 #include "Game.h"
 
+static int init = 0;
+
 WindowManager *WindowManager_getInstance()
 {
     static WindowManager instance;
-    static int init = 0;
     if (!init)
     {
         if (SDL_GetDisplayBounds(0, &instance.userScreen) != 0)
@@ -28,6 +29,7 @@ WindowManager *WindowManager_getInstance()
             Game_quit(EXIT_FAILURE);
         }
         SDL_SetWindowTitle(instance.window, "Fault");
+        SDL_RenderSetLogicalSize(instance.renderer, SCREEN_LOGICAL_WIDTH, SCREEN_LOGICAL_HEIGHT);
         init = 1;
     }
     return &instance;
@@ -35,6 +37,11 @@ WindowManager *WindowManager_getInstance()
 
 void WindowManager_free()
 {
+    if (!init)
+    {
+        return;
+    }
+
     WindowManager *windowManager = WindowManager_getInstance();
     if (windowManager->renderer != NULL)
     {

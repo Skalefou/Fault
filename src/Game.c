@@ -43,7 +43,8 @@ void Game_loop()
     {
         while (SDL_PollEvent(&game->event))
         {
-            if (game->event.type == SDL_QUIT)
+            if (game->event.type == SDL_QUIT ||
+                (game->event.type == SDL_KEYDOWN && game->event.key.keysym.sym == SDLK_ESCAPE))
             {
                 game->runningApp = 0;
             }
@@ -57,6 +58,7 @@ void Game_loop()
 
 void Game_quit(int status)
 {
+    WindowManager_free();
     SDL_Quit();
     exit(status);
 }
