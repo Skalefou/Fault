@@ -1,4 +1,4 @@
-/*
+/**
  * @file Game.h
  * @brief Game management
  * @copydetails Game.c

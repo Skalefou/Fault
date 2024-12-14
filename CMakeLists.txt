@@ -14,6 +14,8 @@ add_executable(Fault src/main.c
         src/Game.c
         include/Game.h
         src/Renderer.c
-        include/Renderer.h)
+        include/Renderer.h
+        src/Texture.c
+        include/Texture.h)
 
 target_link_libraries(Fault ${SDL2_LIBRARIES})

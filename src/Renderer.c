@@ -1,4 +1,4 @@
-/*
+/**
  * @file Renderer.c
  * @brief Renderer management
  * @details Contains all the functions related to rendering
