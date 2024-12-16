@@ -6,3 +6,6 @@
 
 #include "Texture.h"
 
+void Texture_LoadAll() {
+
+}

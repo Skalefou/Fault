@@ -7,6 +7,7 @@ find_package(SDL2 REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/external)
 
 add_executable(Fault src/main.c
         src/WindowManager.c
@@ -16,6 +17,11 @@ add_executable(Fault src/main.c
         src/Renderer.c
         include/Renderer.h
         src/Texture.c
-        include/Texture.h)
+        include/Texture.h
+        src/Graphics.c
+        include/Graphics.h
+        external/cJSON.c
+        external/cJSON.h
+)
 
 target_link_libraries(Fault ${SDL2_LIBRARIES})

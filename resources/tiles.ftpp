@@ -2,7 +2,7 @@
   "meta": {
     "version": "0.6.7"
   },
-  "savePath": "",
+  "savePath": "C:\\Users\\skams\\code-perso\\jeu\\Fault\\cmake-build-debug\\data\\textures\\tiles",
   "images": [],
   "folders": [
     "C:/Users/skams/code-perso/jeu/Fault/resources/texture/tiles"
@@ -17,9 +17,9 @@
     "tinifyKey": "",
     "scale": 1,
     "filter": "none",
-    "exporter": "JSON (hash)",
+    "exporter": "custom",
     "fileName": "pack-result",
-    "savePath": "",
+    "savePath": "C:\\Users\\skams\\code-perso\\jeu\\Fault\\cmake-build-debug\\data\\textures\\tiles",
     "width": 2048,
     "height": 2048,
     "fixedSize": false,
